@@ -1,0 +1,5 @@
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task1IteratorLogic\obj\Debug\Task1IteratorLogic.csprojResolveAssemblyReference.cache
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task1IteratorLogic\bin\Debug\Task1IteratorLogic.dll
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task1IteratorLogic\bin\Debug\Task1IteratorLogic.pdb
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task1IteratorLogic\obj\Debug\Task1IteratorLogic.dll
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task1IteratorLogic\obj\Debug\Task1IteratorLogic.pdb

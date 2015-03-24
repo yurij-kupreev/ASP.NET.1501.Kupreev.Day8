@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1UI", "Task1UI\Task1UI.csproj", "{31F82481-8559-4420-9961-8C4B786DF245}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1Iterator", "Task1Iterator\Task1Iterator.csproj", "{1CA51AE5-AF79-459A-A594-E11F4F6CC8A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1IteratorLogic", "Task1IteratorLogic\Task1IteratorLogic.csproj", "{2131AC3B-FA64-4E82-858C-8E37CEBA84F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31F82481-8559-4420-9961-8C4B786DF245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31F82481-8559-4420-9961-8C4B786DF245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31F82481-8559-4420-9961-8C4B786DF245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31F82481-8559-4420-9961-8C4B786DF245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CA51AE5-AF79-459A-A594-E11F4F6CC8A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA51AE5-AF79-459A-A594-E11F4F6CC8A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA51AE5-AF79-459A-A594-E11F4F6CC8A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA51AE5-AF79-459A-A594-E11F4F6CC8A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2131AC3B-FA64-4E82-858C-8E37CEBA84F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2131AC3B-FA64-4E82-858C-8E37CEBA84F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2131AC3B-FA64-4E82-858C-8E37CEBA84F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2131AC3B-FA64-4E82-858C-8E37CEBA84F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
