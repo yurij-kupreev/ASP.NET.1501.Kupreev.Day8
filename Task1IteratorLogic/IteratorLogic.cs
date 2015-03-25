@@ -8,30 +8,31 @@ namespace Task1IteratorLogic
 {
     public static class IteratorLogic
     {
-        public static IEnumerator<T> EvenIndexes<T>(IEnumerator<T> enumerator)
+        public static IEnumerator<T> EvenIndexes<T>(ICollection<T> collection)
         {
-            int k = 0;
-            while (enumerator.MoveNext())
-            {
-                if (k++ % 2 == 0) yield return enumerator.Current;
-            }
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            for (int i = 0; i < collection.Count; i = i + 2)
+                yield return collection.ElementAt(i);
         }
-        public static IEnumerator<T> OddIndexes<T>(IEnumerator<T> enumerator)
+        public static IEnumerator<T> OddIndexes<T>(ICollection<T> collection)
         {
-            int k = 1;
-            while (enumerator.MoveNext())
-            {
-                if (k++ % 2 == 0) yield return enumerator.Current;
-            }
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            for (int i = 1; i < collection.Count; i = i + 2)
+                yield return collection.ElementAt(i);
         }
 
-        public static IEnumerator<T> ThroughTwoElements<T>(IEnumerator<T> enumerator)
+        public static IEnumerator<T> ThroughTwoElements<T>(ICollection<T> collection)
         {
-            int k = 0;
-            while (enumerator.MoveNext())
-            {
-                if (k++ % 3 == 0) yield return enumerator.Current;
-            }
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            for (int i = 1; i < collection.Count; i = i + 3)
+                yield return collection.ElementAt(i);
+        }
+
+        public static IEnumerator<T> Decrease<T>(ICollection<T> collection)
+        {
+            IEnumerator<T> enumerator = collection.GetEnumerator();
+            for (int i = collection.Count - 1; i >= 0; --i)
+                yield return collection.ElementAt(i);
         }
     }
 }

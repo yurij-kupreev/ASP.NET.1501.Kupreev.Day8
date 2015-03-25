@@ -48,6 +48,12 @@ namespace Task1UI
             {
                 Console.WriteLine(i);
             }
+            Console.WriteLine();
+            enumeratorDemoString = listString.GetIterator(IteratorLogic.Decrease);
+            foreach (var i in enumeratorDemoString)
+            {
+                Console.WriteLine(i);
+            }
 
         }
     }
