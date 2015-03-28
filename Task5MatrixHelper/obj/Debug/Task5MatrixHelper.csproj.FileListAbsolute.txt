@@ -1,0 +1,7 @@
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5MatrixHelper\bin\Debug\Task5MatrixHelper.dll
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5MatrixHelper\bin\Debug\Task5MatrixHelper.pdb
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5MatrixHelper\obj\Debug\Task5MatrixHelper.dll
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5MatrixHelper\obj\Debug\Task5MatrixHelper.pdb
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5MatrixHelper\obj\Debug\Task5MatrixHelper.csprojResolveAssemblyReference.cache
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5MatrixHelper\bin\Debug\Task5Matrix.dll
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5MatrixHelper\bin\Debug\Task5Matrix.pdb

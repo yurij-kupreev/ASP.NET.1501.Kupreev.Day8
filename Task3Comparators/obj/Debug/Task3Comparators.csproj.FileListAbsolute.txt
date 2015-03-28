@@ -1,0 +1,5 @@
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task3Comparators\obj\Debug\Task3Comparators.csprojResolveAssemblyReference.cache
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task3Comparators\bin\Debug\Task3Comparators.dll
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task3Comparators\bin\Debug\Task3Comparators.pdb
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task3Comparators\obj\Debug\Task3Comparators.dll
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task3Comparators\obj\Debug\Task3Comparators.pdb

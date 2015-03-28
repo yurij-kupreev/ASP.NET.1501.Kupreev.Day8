@@ -1,0 +1,7 @@
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task4Tests\bin\Debug\Task4Tests.dll
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task4Tests\bin\Debug\Task4Tests.pdb
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task4Tests\bin\Debug\Task4Fibanacci.dll
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task4Tests\bin\Debug\Task4Fibanacci.pdb
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task4Tests\obj\Debug\Task4Tests.csprojResolveAssemblyReference.cache
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task4Tests\obj\Debug\Task4Tests.dll
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task4Tests\obj\Debug\Task4Tests.pdb

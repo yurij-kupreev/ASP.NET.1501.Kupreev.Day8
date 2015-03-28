@@ -1,0 +1,11 @@
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5Tests\obj\Debug\Task5Tests.csprojResolveAssemblyReference.cache
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5Tests\bin\Debug\Task5Tests.dll
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5Tests\bin\Debug\Task5Tests.pdb
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5Tests\bin\Debug\Task5Matrix.dll
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5Tests\bin\Debug\Task5MatrixGenerator.dll
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5Tests\bin\Debug\Task5MatrixHelper.dll
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5Tests\bin\Debug\Task5MatrixGenerator.pdb
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5Tests\bin\Debug\Task5MatrixHelper.pdb
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5Tests\bin\Debug\Task5Matrix.pdb
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5Tests\obj\Debug\Task5Tests.dll
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5Tests\obj\Debug\Task5Tests.pdb
