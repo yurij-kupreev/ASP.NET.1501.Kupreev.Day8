@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DiagonalMatrix.cs" />
-    <Compile Include="IMatrix.cs" />
+    <Compile Include="ISquareMatrix.cs" />
     <Compile Include="MatrixChangeEvent.cs" />
     <Compile Include="SquareMatrix.cs" />
     <Compile Include="SymmetricMatrix.cs" />

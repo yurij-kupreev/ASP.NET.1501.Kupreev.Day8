@@ -2,3 +2,4 @@ D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5MatrixGenerator\bin\Debug\Task5Ma
 D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5MatrixGenerator\bin\Debug\Task5MatrixGenerator.pdb
 D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5MatrixGenerator\obj\Debug\Task5MatrixGenerator.dll
 D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5MatrixGenerator\obj\Debug\Task5MatrixGenerator.pdb
+D:\epam courses\ASP.NET.1501.Kupreev.Day8\Task5MatrixGenerator\obj\Debug\Task5MatrixGenerator.csprojResolveAssemblyReference.cache

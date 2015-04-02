@@ -19,6 +19,14 @@ namespace Task3Tests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
+        public void BinarySearchTest2()
+        {
+            int[] a = new int[] { 1, 2, 3 };
+            var actual = BinarySearch.Search<int>(a, 2);
+            var expected = 1;
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void BinarySearchTestException()
         {

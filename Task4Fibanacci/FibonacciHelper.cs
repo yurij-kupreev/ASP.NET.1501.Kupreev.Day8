@@ -11,31 +11,24 @@ namespace Task4Fibanacci
         public static int FibonacciSum(int number)
         {
             if (number == 0) throw new ArgumentException("Can not transmit a zero value in function.");
+            else if (number == 1) return 0;
             int sum = 0;
-            foreach(var a in GetValue(GenerateFibonacciSequence(number)))
+            foreach (var a in GetFibonacciValue(number))
             {
                 sum += a;
             }
             return sum;
         }
 
-        private static int[] GenerateFibonacciSequence(int number)
+        private static IEnumerable<int> GetFibonacciValue(int number)
         {
-            int[] sequence = new int[number];
-            sequence[0] = 0;
-            if (number > 1) sequence[1] = 1;
-            for (int i = 2; i < number; ++i)
+            int prev = 0, next = 1, value = 1;
+            while (number-- > 1)
             {
-                sequence[i] = sequence[i - 1] + sequence[i - 2];
-            }
-            return sequence;
-        }
-
-        private static IEnumerable<int> GetValue(int[] sequence)
-        {
-            for (int i = 0; i < sequence.Length; ++i)
-            {
-                yield return sequence[i];
+                yield return value;
+                value = prev + next;
+                prev = next;
+                next = value;
             }
         }
         

@@ -6,25 +6,60 @@ using System.Threading.Tasks;
 
 namespace Task5Matrix
 {
-    public sealed class DiagonalMatrix<T> : SymmetricMatrix<T> where T : IComparable<T>
+    public sealed class DiagonalMatrix<T> : ISquareMatrix<T> where T : IComparable<T>
     {
+        private T[] matrix;
+        public int Length { get; set; }
+        public MatrixChangeEvent mce { get; set; }
         private DiagonalMatrix() { }
-        public DiagonalMatrix(T[,] matrix) : base()
+        public DiagonalMatrix(T[] matrix)
         {
-            if (!CheckMatrix(matrix)) throw new ArgumentException("This matrix is not diagonal.");
-            this.matrix = new T[Length, Length];
+            if (matrix == null) throw new ArgumentNullException();
+            if (!CheckMatrix(matrix.Length)) throw new ArgumentException("This matrix is not diagonal.");
+            this.matrix = new T[matrix.Length];
             Array.Copy(matrix, this.matrix, matrix.Length);
+            mce = new MatrixChangeEvent();
+            mce.Change += SomeAction;
         }
 
-        private bool CheckMatrix(T[,] matrix)
+        public DiagonalMatrix(int length)
         {
-            Length = (int)Math.Pow((double)matrix.Length, 0.5);
-            if (Length * Length != matrix.Length) return false;
-            for (int i = 0; i < Length; ++i)
-                for (int j = 0; j < Length; ++j)
-                {
-                    if (i != j && matrix[i, j].CompareTo(default(T)) != 0) return false;
-                }
+            this.matrix = new T[length];
+            Length = length;
+            mce = new MatrixChangeEvent();
+            mce.Change += SomeAction;
+        }
+
+        public T this[int x, int y]
+        {
+            get
+            {
+                if (x >= Length || y >= Length || x < 0 || y < 0) throw new ArgumentException();
+                if (x == y)
+                    return matrix[x];
+                else return default(T);
+            }
+            set
+            {
+                if ((x >= Length || y >= Length || x < 0 || y < 0) && x != y) throw new ArgumentException();
+                matrix[x] = value;
+                mce.ChangedElement(x, y);
+            }
+        }
+
+        public T[] getMatrix()
+        {
+            return matrix;
+        }
+
+        private void SomeAction(Object sender, ChangeEventArgs eventArgs)
+        {
+            Console.WriteLine("Changed element at position " + eventArgs.X + " " + eventArgs.Y);
+        }
+
+        public bool CheckMatrix(int matrixLength)
+        {
+            Length = matrixLength;
             return true;
         }
     }

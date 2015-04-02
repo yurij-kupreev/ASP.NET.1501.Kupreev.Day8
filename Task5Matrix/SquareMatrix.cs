@@ -6,23 +6,26 @@ using System.Threading.Tasks;
 
 namespace Task5Matrix
 {
-    public class SquareMatrix<T> : IMatrix<T> where T : IComparable<T>
+    public class SquareMatrix<T> : ISquareMatrix<T> where T : IComparable<T>
     {
-        protected T[,] matrix;
+        private T[] matrix;
         public int Length { get; set; }
-        protected readonly MatrixChangeEvent mce;
+        public MatrixChangeEvent mce { get; set; }
 
-        public SquareMatrix(T[,] matrix)
+        public SquareMatrix(T[] matrix)
         {
-            if (!CheckMatrix(matrix)) throw new ArgumentException("This matrix is not Square.");
-            this.matrix = new T[Length, Length];
+            if (matrix == null) throw new ArgumentNullException();
+            if (!CheckMatrix(matrix.Length)) throw new ArgumentException("This matrix is not Square.");
+            this.matrix = new T[matrix.Length];
             Array.Copy(matrix, this.matrix, matrix.Length);
             mce = new MatrixChangeEvent();
             mce.Change += SomeAction;
         }
 
-        protected SquareMatrix()
+        public SquareMatrix(int length)
         {
+            this.matrix = new T[length * length];
+            Length = length;
             mce = new MatrixChangeEvent();
             mce.Change += SomeAction;
         }
@@ -32,30 +35,33 @@ namespace Task5Matrix
             get
             {
                 if (x >= Length || y >= Length || x < 0 || y < 0) throw new ArgumentException();
-                return matrix[x, y];
+                return matrix[x * Length + y];
             }
             set
             {
                 if (x >= Length || y >= Length || x < 0 || y < 0) throw new ArgumentException();
-                matrix[x, y] = value;
+                matrix[x * Length + y] = value;
                 mce.ChangedElement(x, y);
             }
         }
 
-        public T[,] getMatrix()
+        public T[] getMatrix()
         {
             return matrix;
         }
 
-        protected void SomeAction(Object sender, ChangeEventArgs eventArgs)
+        private void SomeAction(Object sender, ChangeEventArgs eventArgs)
         {
             Console.WriteLine("Changed element at position " + eventArgs.X + " " + eventArgs.Y);
         }
 
-        private bool CheckMatrix(T[,] matrix)
+        public bool CheckMatrix(int matrixLength)
         {
-            Length = (int)Math.Pow((double)matrix.Length, 0.5);
-            if (Length * Length == matrix.Length) return true;
+            Length = (int)Math.Pow((double)matrixLength, 0.5);
+            if (Length * Length == matrixLength)
+            {
+                return true;
+            }
             else return false;
         }
     }

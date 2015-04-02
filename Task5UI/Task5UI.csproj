@@ -52,6 +52,10 @@
       <Project>{96892f4f-7eb5-4644-895b-6a7948e09250}</Project>
       <Name>Task5MatrixGenerator</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Task5MatrixHelper\Task5MatrixHelper.csproj">
+      <Project>{4b37467d-b417-4dd2-b7c1-b84dfdd7c0fa}</Project>
+      <Name>Task5MatrixHelper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Task5Matrix\Task5Matrix.csproj">
       <Project>{02046380-f870-4768-b1c8-370f67870e1b}</Project>
       <Name>Task5Matrix</Name>

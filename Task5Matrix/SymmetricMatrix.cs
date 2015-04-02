@@ -6,26 +6,91 @@ using System.Threading.Tasks;
 
 namespace Task5Matrix
 {
-    public class SymmetricMatrix<T> : SquareMatrix<T> where T : IComparable<T>
+    public class SymmetricMatrix<T> : ISquareMatrix<T> where T : IComparable<T>
     {
-        protected SymmetricMatrix(): base() {  }
-        public SymmetricMatrix(T[,] matrix): base()
+        private T[] matrix;
+        public int Length { get; set; }
+        public MatrixChangeEvent mce { get; set; }
+
+        public SymmetricMatrix(T[] matrix)
         {
-            if (!CheckMatrix(matrix)) throw new ArgumentException("This matrix is not symmetric.");
-            this.matrix = new T[Length, Length];
+            if (matrix == null) throw new ArgumentNullException();
+            if (!CheckMatrix(matrix.Length)) throw new ArgumentException("This matrix is not symmetric.");
+            this.matrix = new T[matrix.Length];
             Array.Copy(matrix, this.matrix, matrix.Length);
+            mce = new MatrixChangeEvent();
+            mce.Change += SomeAction;
         }
 
-        private bool CheckMatrix(T[,] matrix)
+        public SymmetricMatrix(int length)
         {
-            Length = (int)Math.Pow((double)matrix.Length, 0.5);
-            if (Length * Length != matrix.Length) return false;
-            for (int i = 0; i < Length; ++i)
-                for (int j = i + 1; j < Length; ++j)
+            Length = length;
+            int size = 0;
+            for (int i = 1; i <= Length; ++i)
+            {
+                size += i;
+            }
+            this.matrix = new T[size];
+            mce = new MatrixChangeEvent();
+            mce.Change += SomeAction;
+        }
+
+        public T this[int x, int y]
+        {
+            get
+            {
+                if (x >= Length || y >= Length || x < 0 || y < 0) throw new ArgumentException();
+                int index;
+                if (x <= y) index = CalculateIndex(x, y);
+                else index = CalculateIndex(y, x);
+                return matrix[index];
+            }
+            set
+            {
+                if (x >= Length || y >= Length || x < 0 || y < 0) throw new ArgumentException();
+                int index;
+                if (x <= y) index = CalculateIndex(x, y);
+                else index = CalculateIndex(y, x);
+                matrix[index] = value;
+                mce.ChangedElement(x, y);
+            }
+        }
+
+        public T[] getMatrix()
+        {
+            return matrix;
+        }
+
+        private void SomeAction(Object sender, ChangeEventArgs eventArgs)
+        {
+            Console.WriteLine("Changed element at position " + eventArgs.X + " " + eventArgs.Y
+                + " and position " + eventArgs.Y + " " + eventArgs.X);
+        }
+
+        private int CalculateIndex(int x, int y)
+        {
+            int sum = 0;
+            for (int i = Length; i > (Length - x); --i)
+            {
+                sum += i;
+            }
+            sum += (y - x);
+            return sum;
+        }
+
+        private bool CheckMatrix(int matrixLength)
+        {
+            int sum = 0;
+            for (int i = 1; i <= matrixLength; ++i)
+            {
+                sum += i;
+                if (sum == matrixLength)
                 {
-                    if ( matrix[i, j].CompareTo(matrix[j, i]) != 0) return false;
+                    Length = i;
+                    return true;
                 }
-            return true;
+            }
+            return false;  
         }
     }
 }
