@@ -16,7 +16,7 @@ namespace Task5Tests
             var matrixright = new SymmetricMatrix<int>(new int[6] { 1, 1, 1, 1, 1, 1 });
             var newMatrix = new SquareMatrix<int>(3);
             ISquareMatrix<int> result = newMatrix;
-            MatrixHelper.Add<int>((ISquareMatrix<int>)matrixleft, (ISquareMatrix<int>)matrixright, ref result);
+            MatrixHelper.Add<int>((ISquareMatrix<int>)matrixleft, (ISquareMatrix<int>)matrixright, result);
             var expected = new SquareMatrix<int>(new int[9] { 4, 5, 1, 1, 5, 1, 1, 1, 16 });
             Assert.IsTrue(CompareMatrix((ISquareMatrix<int>)expected, result));
         }
@@ -29,7 +29,7 @@ namespace Task5Tests
             var matrixright = new SymmetricMatrix<int>(new int[3] { 1, 1, 1 });
             var newMatrix = new SquareMatrix<int>(3);
             ISquareMatrix<int> result = newMatrix;
-            MatrixHelper.Add<int>((ISquareMatrix<int>)matrixleft, (ISquareMatrix<int>)matrixright, ref result);
+            MatrixHelper.Add<int>((ISquareMatrix<int>)matrixleft, (ISquareMatrix<int>)matrixright, result);
         }
 
         private bool CompareMatrix(ISquareMatrix<int> matrixLeft, ISquareMatrix<int> matrixRight)

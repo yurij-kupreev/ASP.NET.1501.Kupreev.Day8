@@ -9,7 +9,7 @@ namespace Task5MatrixHelper
 {
     public static class MatrixHelper
     {
-        public static void Add<T>(ISquareMatrix<T> matrixleft, ISquareMatrix<T> matrixright, ref ISquareMatrix<T> result)
+        public static void Add<T>(ISquareMatrix<T> matrixleft, ISquareMatrix<T> matrixright, ISquareMatrix<T> result)
         {
             if (matrixleft == null || matrixright == null || result == null || matrixleft.Length != matrixright.Length
                 || matrixleft.Length != result.Length) 
